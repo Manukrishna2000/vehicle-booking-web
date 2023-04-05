@@ -1,0 +1,301 @@
+
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+    $("#model").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#model').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkmodel",
+                data: { mo: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("m").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+
+
+    $("#username").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#username').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkusername",
+                data: { un: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("u").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+
+ $("#phone").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#phone').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkphone1",
+                data: { ph: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("p").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+});
+
+
+
+
+
+
+</script>
+
+
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+
+<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Buttons :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<link href="static/css/style1.css" rel="stylesheet" type="text/css" media="all"/>
+<!--js-->
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<!--icons-css-->
+<link href="static/css/font-awesome.css" rel="stylesheet">
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+<!--button css-->
+<link href="static/css/demo-page.css" rel="stylesheet" media="all">
+<link href="static/css/hover.css" rel="stylesheet" media="all">
+<!--//but-->
+</head>
+<body>
+
+<ul>
+  <li><a href="/adminhome">Home</a></li>
+						<li><a href="/addvehicle" class="active">Add vehicles</a></li>
+						<li><a href="/view_vehicle">View vehicles</a></li>
+						<li><a href="/view_users">View users</a></li>
+						<li><a href="/view_booking">View booking</a></li>
+    						<li><a href="/view_complete">View completed booking</a></li>
+    <li><a href="/logout">Logout</a></li>
+
+
+</ul>
+
+
+<div class="page-container">
+   <div class="left-content">
+	   <div class="mother-grid-inner">
+            <!--header start here-->
+				<div class="header-main">
+					<div class="header-left">
+							<div class="logo-name">
+									 <a href="/"> <h1>Autocar</h1>
+									<!--<img id="logo" src="" alt="Logo"/>-->
+								  </a>
+							</div>
+							<!--search-box-->
+								<form action="/addvehicle_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table" >
+    <tr>
+      <td>Name</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td><label for="model"></label>
+        <input type="text" name="textfield1" id="model"  class="form-control" required/></td>
+        <td><label id="m"></label></td>
+     </td>
+    </tr>
+       <tr>
+      <td>Specification</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2"  class="form-control"  required /></td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3"   class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>photo</td>
+      <td><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField"  class="form-control"  required/></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <strong>
+        <input type="submit" name="button" id="button"  value="Add"  class="btn btn-success"/>
+           <a href="/adminhome"> <input type="button" name="button" id="button"  value="Home"  class="btn btn-success"/>
+      </strong></div></a></td>
+    </tr>
+  </table>
+</form>
+<!--slider menu-->
+<!--    <div class="sidebar-menu">-->
+<!--		  	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span>-->
+<!--			      &lt;!&ndash;<img id="logo" src="" alt="Logo"/>&ndash;&gt;-->
+<!--			  </a> </div>-->
+<!--		    <div class="menu">-->
+<!--		      <ul id="menu" >-->
+<!--		        <li id="menu-home" ><a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>-->
+<!--		        <li><a href="#"><i class="fa fa-cogs"></i><span>Components</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul>-->
+<!--		            <li><a href="grids.html">Grids</a></li>-->
+<!--		            <li><a href="portlet.html">Portlets</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+<!--		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Element</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul id="menu-comunicacao-sub" >-->
+<!--		            <li id="menu-mensagens" style="width: 120px" ><a href="buttons.html">Buttons</a>-->
+<!--		            </li>-->
+<!--		            <li id="menu-arquivos" ><a href="typography.html">Typography</a></li>-->
+<!--		             <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+<!--		          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>-->
+<!--		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Pages</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul id="menu-academico-sub" >-->
+<!--		          	 <li id="menu-academico-boletim" ><a href="login.html">Login</a></li>-->
+<!--		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Sign Up</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+
+<!--		        <li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span></a></li>-->
+<!--		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		        	 <ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>-->
+<!--		             </ul>-->
+<!--		        </li>-->
+<!--		         <li><a href="#"><i class="fa fa-cog"></i><span>System</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		         	 <ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="404.html">404</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="blank.html">Blank</a></li>-->
+<!--		             </ul>-->
+<!--		         </li>-->
+<!--		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		         	<ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>-->
+<!--		             </ul>-->
+<!--		         </li>-->
+<!--		      </ul>-->
+<!--		    </div>-->
+<!--	 </div>-->
+<!--	<div class="clearfix"> </div>-->
+<!--</div>-->
+<!--slide bar menu end here-->
+<script>
+var toggle = true;
+
+$(".sidebar-icon").click(function() {
+  if (toggle)
+  {
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"absolute"});
+  }
+  else
+  {
+    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+    }, 400);
+  }
+                toggle = !toggle;
+            });
+</script>
+<!--scrolling js-->
+		<script src="static/js/jquery.nicescroll.js"></script>
+		<script src="static/js/scripts.js"></script>
+		<!--//scrolling js-->
+<script src="static/js/bootstrap.js"> </script>
+<!-- mother grid end here-->
+</body>
+</html>

@@ -1,0 +1,123 @@
+<head>
+<title>Auto Car </title>
+
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Auto Car Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+
+<!-- css files -->
+<link href="static/css/mislider.css" rel="stylesheet" type="text/css" />
+<link href="static/css/mislider-custom.css" rel="stylesheet" type="text/css" />
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> <!-- Bootstrap-Core-CSS -->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" /> <!-- Style-CSS -->
+<link rel="stylesheet" href="static/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<!-- //css files -->
+
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Jockey+One&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Niconne&amp;subset=latin-ext" rel="stylesheet">
+<!-- //online-fonts -->
+
+	<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+
+</head>
+
+<body>
+<!-- banner -->
+	<div class="banner wthree">
+		<div class="container">
+			<div class="banner_top">
+				<div class="logo wow fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+					<h1><a href="index.html"><span>A</span>uto Car</a></h1>
+				</div>
+				<div class="banner_top_right wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav cl-effect-14">
+						<li><a href="index.html" >Home</a></li>
+						<li><a href="/addvehicle">Add vehicles</a></li>
+						<li><a href="/view_vehicle" class="active">View vehicles</a></li>
+						<li><a href="/view_users">View users</a></li>
+						<li><a href="/view_booking">View booking</a></li>
+						<li><a href="/">Logout</a></li>
+
+					</ul>
+				</div><!-- /.navbar-collapse -->
+
+			</nav>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<!-- banner -->
+			<!--Slider-->
+
+			<!--//Slider-->
+
+	</div>
+<form id="form1" name="form1" method="post" action="">
+  <table id="customers">
+    <tr>
+      <th width="25">Vehicle id</th>
+      <th width="25">Vehicle name</th>
+      <th width="25">Model </th>
+      <th width="48"><p>Specification</p></th>
+        <th>Price</th>
+      <th width="47">Photo</th>
+      <th colspan="2">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr bgcolor="white">
+      <td>{{ i['v_id'] }}&nbsp;</td>
+      <td>{{ i['vehicle_name'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['model'] }}&nbsp;</td>
+        <td>{{ i['specification'] }}</td>
+      <td>&nbsp;{{ i['price'] }}<br/></td>
+     <td> <img src="{{ i['photo'] }}" width="150" height="100"></td>
+      <td width="22"><a href="/view_vehicle_edit/{{ i['v_id'] }}" class="btn btn-primary">edit</a></td>
+      <td width="99"><a href="/delete/{{ i['v_id'] }}" class="btn btn-danger">delete</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>

@@ -1,0 +1,195 @@
+
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head><style>
+
+
+input[type="submit"] {
+    font-size: 0.9em;
+    background-color: #68AE00;
+    border:none;
+    color: #fff;
+    padding:0.8em 1.5em;
+    margin-top: 1em;
+        outline: none;
+</style>
+<title>Auto Car </title>
+
+<!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Auto Car Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+
+<!-- css files -->
+<link href="static/css/mislider.css" rel="stylesheet" type="text/css" />
+<link href="static/css/mislider-custom.css" rel="stylesheet" type="text/css" />
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> <!-- Bootstrap-Core-CSS -->
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" /> <!-- Style-CSS -->
+<link rel="stylesheet" href="static/css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<!-- //css files -->
+
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Jockey+One&amp;subset=latin-ext" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Niconne&amp;subset=latin-ext" rel="stylesheet">
+<!-- //online-fonts -->
+</head>
+<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Buttons :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<link href="static/css/style1.css" rel="stylesheet" type="text/css" media="all"/>
+<!--js-->
+<script src="static/js/jquery-2.1.1.min.js"></script>
+<!--icons-css-->
+<link href="static/css/font-awesome.css" rel="stylesheet">
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+<!--button css-->
+<link href="static/css/demo-page.css" rel="stylesheet" media="all">
+<link href="static/css/hover.css" rel="stylesheet" media="all">
+<!--//but-->
+<style>
+table{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+<body>
+
+<!-- banner -->
+<form action="/edit_vehicle_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table>
+      <tr><td>Vehicle id</td>
+      <td><label for="textfield0"></label>
+      <input type="text" name="vid" id="textfield0"  value="{{ data['v_id'] }}" class="form-control" required readonly/></td></tr>
+    <tr>
+      <td>Name</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"  value="{{ data['vehicle_name'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Model</td>
+      <td><label for="textfield1"></label>
+        <input type="text" name="textfield1" id="textfield1" value="{{ data['model'] }}" class="form-control" required/></td>
+     </td>
+    </tr>
+       <tr>
+      <td>Specification</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data['specification'] }}" class="form-control"  required /></td>
+    </tr>
+    <tr>
+      <td>price</td>
+      <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3"  value="{{ data['price'] }}" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>photo</td>
+      <td><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField"  value="{{ data['photo']}}" class="form-control"  required/></td>
+    </tr>
+
+      <td colspan="2"><div align="center">
+        <strong>
+        <input type="submit" name="button" id="button"  value="Edit"/>
+      </strong></div></td>
+
+  </table>
+</form>
+<!--slider menu-->
+<!--    <div class="sidebar-menu">-->
+<!--		  	<div class="logo"> <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="#"> <span id="logo" ></span>-->
+<!--			      &lt;!&ndash;<img id="logo" src="" alt="Logo"/>&ndash;&gt;-->
+<!--			  </a> </div>-->
+<!--		    <div class="menu">-->
+<!--		      <ul id="menu" >-->
+<!--		        <li id="menu-home" ><a href="index.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>-->
+<!--		        <li><a href="#"><i class="fa fa-cogs"></i><span>Components</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul>-->
+<!--		            <li><a href="grids.html">Grids</a></li>-->
+<!--		            <li><a href="portlet.html">Portlets</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+<!--		        <li id="menu-comunicacao" ><a href="#"><i class="fa fa-book nav_icon"></i><span>Element</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul id="menu-comunicacao-sub" >-->
+<!--		            <li id="menu-mensagens" style="width: 120px" ><a href="buttons.html">Buttons</a>-->
+<!--		            </li>-->
+<!--		            <li id="menu-arquivos" ><a href="typography.html">Typography</a></li>-->
+<!--		             <li id="menu-arquivos" ><a href="icons.html">Icons</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+<!--		          <li><a href="maps.html"><i class="fa fa-map-marker"></i><span>Maps</span></a></li>-->
+<!--		        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text"></i><span>Pages</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		          <ul id="menu-academico-sub" >-->
+<!--		          	 <li id="menu-academico-boletim" ><a href="login.html">Login</a></li>-->
+<!--		            <li id="menu-academico-avaliacoes" ><a href="signup.html">Sign Up</a></li>-->
+<!--		          </ul>-->
+<!--		        </li>-->
+
+<!--		        <li><a href="charts.html"><i class="fa fa-bar-chart"></i><span>Charts</span></a></li>-->
+<!--		        <li><a href="#"><i class="fa fa-envelope"></i><span>Mailbox</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		        	 <ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="inbox.html">Inbox</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="inbox-details.html">Compose email</a></li>-->
+<!--		             </ul>-->
+<!--		        </li>-->
+<!--		         <li><a href="#"><i class="fa fa-cog"></i><span>System</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		         	 <ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="404.html">404</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="blank.html">Blank</a></li>-->
+<!--		             </ul>-->
+<!--		         </li>-->
+<!--		         <li><a href="#"><i class="fa fa-shopping-cart"></i><span>E-Commerce</span><span class="fa fa-angle-right" style="float: right"></span></a>-->
+<!--		         	<ul id="menu-academico-sub" >-->
+<!--			            <li id="menu-academico-avaliacoes" ><a href="product.html">Product</a></li>-->
+<!--			            <li id="menu-academico-boletim" ><a href="price.html">Price</a></li>-->
+<!--		             </ul>-->
+<!--		         </li>-->
+<!--		      </ul>-->
+<!--		    </div>-->
+<!--	 </div>-->
+<!--	<div class="clearfix"> </div>-->
+<!--</div>-->
+<!--slide bar menu end here-->
+<!--scrolling js-->
+		<script src="static/js/jquery.nicescroll.js"></script>
+		<script src="static/js/scripts.js"></script>
+		<!--//scrolling js-->
+<script src="static/js/bootstrap.js"> </script>
+<!-- mother grid end here-->
+</body>
+</html>

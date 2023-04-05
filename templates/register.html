@@ -1,0 +1,219 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<title>Book for test drive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Softball Registration Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- font files -->
+<link href="//fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+<!-- /font files -->
+<!-- css files -->
+<link href="static/css/style3.css" rel='stylesheet' type='text/css' media="all" />
+<!-- /css files -->
+<link href="static/css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+    $("#email").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#email').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkemail1",
+                data: { em: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("e").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+
+
+    $("#username").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#username').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkusername",
+                data: { un: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("u").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+
+ $("#phone").keyup(function() {
+
+        if ($(this).val() != 'default') {
+
+            var br = $('#phone').val();
+
+
+
+            $.ajax({
+                type: 'POST',
+                url: "/checkphone1",
+                data: { ph: br },
+
+                success: function(response) {
+                response=response.replace('"',"").replace('"',"")
+                document.getElementById("p").innerHTML=response
+
+
+
+                }
+            });
+        }
+
+    });
+
+});
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+
+</div>
+
+	<div class="w3-banner-main">
+		<div class="center-container">
+
+			<h1 class="header-w3ls">REGISTER</h1>
+			<div class="content-top">
+				<div class="content-w3ls">
+					<div class="form-w3ls">
+						<form method="post" enctype="multipart/form-data" action="/register_post">
+							<div class="content-wthree1">
+								<div class="grid-agileits1">
+									<div class="form-control"> 
+										<label class="header">Name </label>
+										<input type="text" id="name" name="name" placeholder="" title="Please enter your Full Name" required="">
+									</div>
+									
+									<div class="form-control">	
+										<label class="header">Email </label>
+										<input type="email" id="email" name="email" placeholder="" title="Please enter a Valid Email Address" required="">
+										<font color="white"><div id="e"></div></font>
+									</div>
+									
+									<div class="form-control"> 
+										<label class="header">Phone number </label>
+										<input type="text" id="phone" name="phone" max="10" min="10" pattern="[6789][0-9]{9}" placeholder="" title="Please enter your Phone number" required="">
+										<font color="white"><div id="p"></div></font>
+									</div>
+									<div class="grid-w3layouts1">
+
+								</div>
+<!--								<div class="form-control">-->
+<!--							<label class="header">Preffered date for your test drive </label>-->
+<!--							<input  id="datepicker1" name="date" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">-->
+<!--						</div>-->
+<!--						<div class="gaps">-->
+<!--							<label class="header">Time </label>	-->
+<!--							<input type="text" id="timepicker" name="time" class="timepicker form-control" value="">-->
+<!--						</div>	-->
+								</div>
+							</div>
+					</div>
+					<div class="form-w3ls-1">
+<!--						<div class="form-control">-->
+<!--								<label class="header">Model for testdrive </label>-->
+<!--									<select class="form-control" name="model">-->
+<!--										<option></option>{% for i in data %}{{loop.index }}-->
+<!--										<option>{{ i['model'] }}&nbsp;</option>-->
+<!--										{% endfor %}-->
+<!--									</select>-->
+<!--						</div>-->
+						<div class="form-control"> 
+							<label class="header">Address </label>
+							<input type="text" id="name" name="address" placeholder="" title="Please enter your place" pattern="[A-Z a-z.]{3,25}" required="">
+						</div>	
+						<div class="form-control"> 
+							<label class="header">Zip code </label>
+							<input type="text" id="name" name="zip" placeholder=""  title="Please enter your Full Name" required pattern="[0-9]{6}" required="">
+						</div>
+						<div class="form-control">
+							<label class="header">City </label>
+							<input type="text" id="name" name="city" placeholder="" title="Please enter your City" pattern="[A-Z a-z.]{3,25}"  required="">
+						</div>
+						<div class="form-control">
+							<label class="header">Username </label>
+							<input type="text" id="username" name="username" placeholder="" title="username" pattern="[A-Z a-z.]{3,25}"  required="">
+							<font color="white"><div id="u">
+						</div></font>
+						</div>
+						<div class="form-control">
+							<label class="header">Password </label>
+							<input type="password" id="name" name="password" placeholder=""  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+						</div><br><br><br>
+
+									  <input type="submit" value="Register">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/"><input type="button" value="HOME">
+									  </a>
+					</div>				
+					<div class="clear"></div>
+				</div>
+			</div>
+				<p class="copyright"></p>
+		</div>
+	</div>
+
+<!-- Calendar -->
+				<link rel="stylesheet" href="static/css/jquery-ui.css" />
+				<script src="static/js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+			<script type="text/javascript" src="static/js/wickedpicker.js"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+
+
+</body>
+</html>
